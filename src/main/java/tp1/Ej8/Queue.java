@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Queue <T> extends sequence {
     private List <T> data;
     
-    public void Queue (){
+    public Queue (){
         this.data = new ArrayList <T> ();
     }
     
