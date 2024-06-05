@@ -1,11 +1,11 @@
-package tp5.ejercicio1.adjList;
+package tp5.ayed2024.src.tp5.ejercicio1.adjList;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import tp5.ejercicio1.Edge;
-import tp5.ejercicio1.Graph;
-import tp5.ejercicio1.Vertex;
+import tp5.ayed2024.src.tp5.ejercicio1.Edge;
+import tp5.ayed2024.src.tp5.ejercicio1.Graph;
+import tp5.ayed2024.src.tp5.ejercicio1.Vertex;
 
 /**
  * Implementación del grafo con listas de adyacencias.

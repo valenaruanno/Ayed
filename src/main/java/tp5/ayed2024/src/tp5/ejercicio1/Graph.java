@@ -1,4 +1,4 @@
-package tp5.ejercicio1;
+package tp5.ayed2024.src.tp5.ejercicio1;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package tp5.ejercicio1.adjMatrix;
+package tp5.ayed2024.src.tp5.ejercicio1.adjMatrix;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
@@ -10,9 +10,9 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import tp5.ejercicio1.Edge;
-import tp5.ejercicio1.Graph;
-import tp5.ejercicio1.Vertex;
+import tp5.ayed2024.src.tp5.ejercicio1.Edge;
+import tp5.ayed2024.src.tp5.ejercicio1.Graph;
+import tp5.ayed2024.src.tp5.ejercicio1.Vertex;
 
 public class GraphTest {
 	AdjMatrixGraph<Integer> grafo;

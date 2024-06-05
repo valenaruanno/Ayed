@@ -31,7 +31,7 @@ public class ParcialArboles {
             List <GeneralTree <Integer>> children = arbol.getChildren();
             for (GeneralTree <Integer> child : children){
                 resCaminoAct = resolver(child, caminoAct, camino, nivel++, resCaminoAct, resCamino);
-                caminoAct.removeLast();
+                caminoAct.remove(child);
             }
         } else{
             if (resCaminoAct > resCamino){

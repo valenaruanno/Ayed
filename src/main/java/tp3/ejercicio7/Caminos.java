@@ -29,7 +29,7 @@ public class Caminos {
             List <GeneralTree<Integer>> children = (LinkedList) arbol.getChildren();
             for (GeneralTree <Integer> child: children){
                 camino (child, lista, definitivo);
-                lista.removeLast();
+                lista.remove(child);
             }
         } else{
             lista.add(arbol.getData());
