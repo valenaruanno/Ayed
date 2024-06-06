@@ -25,7 +25,7 @@ public class Recorridos {
         return lista;
     }
     
-    private LinkedList<Vertex<T>> dfs (int i, Graph <T> grafo, boolean [] marca, LinkedList <Vertex<T>> lista){
+    private void dfs (int i, Graph <T> grafo, boolean [] marca, LinkedList <Vertex<T>> lista){
         marca[i] = true;
         Vertex <T> v = grafo.getVertex(i);
         lista.add(v.getData());
@@ -36,7 +36,6 @@ public class Recorridos {
                 dfs (j, grafo, marca, lista);
             }
         }
-        return lista;
     }
     
     public LinkedList <T> bfs (Graph <T> grafo){
@@ -50,7 +49,7 @@ public class Recorridos {
         return lista;
     }
     
-    private List<T> bfs (int i, Graph <T> grafo, boolean [] marca, LinkedList <T> lista){
+    private void bfs (int i, Graph <T> grafo, boolean [] marca, LinkedList <T> lista){
         Queue <Vertex<T>> cola = new Queue <Vertex<T>> ();
         marca [i] = true;
         cola.enQueue(grafo.getVertex(i));
@@ -68,7 +67,6 @@ public class Recorridos {
                     }
                 }
             }
-        return lista;
     } 
 }
     
