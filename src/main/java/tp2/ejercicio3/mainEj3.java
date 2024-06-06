@@ -24,7 +24,8 @@ public class mainEj3 {
         lista = c1.numerosPares(); 
         for (Integer i: lista){
             System.out.println(i);
-        }
+        } 
     }
+    
     
 }

@@ -28,7 +28,7 @@ public class Recorridos {
     private void dfs (int i, Graph <T> grafo, boolean [] marca, LinkedList <Vertex<T>> lista){
         marca[i] = true;
         Vertex <T> v = grafo.getVertex(i);
-        lista.add(v.getData());
+        lista.add(v);
         List <Edge<T>> adyacentes = grafo.getEdges(v); 
         for (Edge <T> e: adyacentes){
             int j = e.getTarget().getPosition();
@@ -53,21 +53,22 @@ public class Recorridos {
         Queue <Vertex<T>> cola = new Queue <Vertex<T>> ();
         marca [i] = true;
         cola.enQueue(grafo.getVertex(i));
-        int j;
+        int j = 0;
         while (!cola.isEmpty()){
             Vertex <T> aux = cola.deQueue();
             if (!aux.equals(null)){
                 lista.add(aux.getData());
                 List <Edge<T>> adyacentes = grafo.getEdges(aux);
-                for (Edge<T> e : adyacentes)
-                    j = e.getTarget.getPosition();
+                for (Edge<T> ver : adyacentes){
+                    j = ver.getTarget().getPosition();
                     if (marca[j] = false){
                         marca [j] = true;
-                        cola.enQueue(e.getTarget());
+                        cola.enQueue(ver.getTarget());
                     }
                 }
             }
-    } 
+        } 
+    }
 }
     
 
