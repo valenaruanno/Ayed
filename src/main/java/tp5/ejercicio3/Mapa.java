@@ -38,12 +38,11 @@ public class Mapa {
     
     private boolean dfs (Graph<String> grafo, Vertex<String> v, String ciudad2, List<String> camino, boolean [] marca){
         boolean ok = false; 
+        marca[v.getPosition()] = true;
+        camino.add(v.getData());
         if (v.getData() == ciudad2){
-            camino.add(v.getData());
             ok = true;
         }else {
-            camino.add(v.getData());
-            marca[v.getPosition()] = true;
             List <Edge<String>> adyacentes = grafo.getEdges (v);
             Iterator <Edge<String>> it = adyacentes.iterator();
             while ((it.hasNext()) && (ok == false)){
@@ -101,5 +100,18 @@ public class Mapa {
                 camino.remove(v);
         }
         return ok;
+    }
+    
+    public List<String> caminoMasCorto (String ciudad1, String ciudad2){
+        List<String> caminoAct = new LinkedList <String> ();
+        List<String> camino = new LinkedList <String> ();
+        if (!grafo.isEmpty()){
+            buscarCaminoCorto (grafo, ciudad1, ciudad2, caminoAct, camino);
+        }
+        return camino;
+    }
+    
+    private void buscarCaminoCorto (Graph<String> grafo, String ciudad1, String ciudad2, List<String> caminoAct, List<String> camino){
+        
     }
 }

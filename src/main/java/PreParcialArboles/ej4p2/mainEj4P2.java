@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PreParcialArboles.ej2p4;
+package PreParcialArboles.ej4p2;
 import tp2.ejercicio1.BinaryTree;
 /**
  *
