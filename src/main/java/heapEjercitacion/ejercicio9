@@ -1,0 +1,19 @@
+9)
+                                        11
+                        21                              27
+                37              36              34              32
+            43      44      42      51      62
+
+Si insertamos el 16, 
+
+                                        11
+                        21                              16
+                37              36              27              32
+            43      44      42      51      62      34
+
+El mismo quedaria en la posicion A[3].
+
+
+
+
+

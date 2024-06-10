@@ -1,0 +1,42 @@
+19) heap: 58 38 53 23 28 40 35 18
+
+    Si ejecutamos solo 2 pasos de la segunda etapa...
+
+    Paso 1:  {53 38 40 23 28 18 35} 58       
+                                53
+                38                              40
+        23              28              18              35
+    ----------------------------------------------------------------
+    Paso 2:  {40 38 35 23 28 18} 53 58       
+                                40
+                38                              35
+        23              28              18                 
+        
+    Opcion D
+
+20) Opcion C. El hijo derecho del 15 esta en la posicion 9.
+
+21) 15, 25, 23, 13, 18, 2, 19, 20, 17. Construimos la min-heap insrtando las 
+    claves una a una.
+
+                                2
+                15                              13
+        17              18              23              19
+    25      20
+
+    Armamos el arreglo... {2, 15, 13, 17, 18, 23, 19, 25, 20}
+
+    La clave 2 quedo en la posicion 1, la 18 en la posicion 5 y la 25 en la 8.
+
+
+
+
+
+
+
+
+
+
+
+
+

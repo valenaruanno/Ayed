@@ -1,0 +1,22 @@
+16) La operacion que agrega elementeos a una heap tiene O(log n) operaciones en
+    el peor caso ya que debe recorrer la altura de la heap.
+
+17)  13, 21, 87, 30, 25, 22, 18. Si insertamos las claves una a una...
+
+                        87
+            30                      22
+        13      25              21      18
+
+        Opcion D. El resultado de la construccion es 87, 30, 22, 13, 25, 21, 18.
+
+18)  13, 21, 87, 30, 25, 22, 18. Si insertamos las claves usando el buil-heap...
+
+                        87
+            30                      22
+        21      25              13      18
+
+        Opcion B. El resultado de la construccion es 87, 30, 22, 21, 25, 13, 18.
+
+
+
+

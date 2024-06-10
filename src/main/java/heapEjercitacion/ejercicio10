@@ -1,0 +1,47 @@
+10)  
+                                        11
+                        21                              27
+                37              36              34              32
+            43      44      42      51      62
+
+Si aplicamos un delete min, 
+
+                                        21
+                        36                              27
+                37              42              34              32
+            43      44      51      62      
+
+El 62 queda almacenado en la posicion A[12].    Opcion D.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
