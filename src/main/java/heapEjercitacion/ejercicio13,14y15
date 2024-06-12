@@ -1,0 +1,6 @@
+13) La opcion B es un posible orden del arreglo.
+
+14) Opcion C. Para un elemento I, su hijo derecho esta en la posicion 2*I + 1.
+
+15) No, para que un arbol lleno sea una heap tiene que cumplir con alguna de las
+    propiedades de orden, Max-heap o Min-heap.                                                  DUDA
