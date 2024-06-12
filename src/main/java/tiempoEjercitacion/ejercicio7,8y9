@@ -1,0 +1,32 @@
+7) i- Opcion D. T(n/3/3) + c
+
+    ii-
+    Paso 1: T(n/3) + c
+    Paso 2: [T(n/9) + c] + c      -> T(n/9) + 2c
+    Paso 3: [T(n/27) + c] + 2c    -> T(n/27) + 3c
+    Paso i: [T(n/3^i) + c] + i*c  -> T(n/3^i) + i*c 
+
+    Reemplazando i
+    n/3^i = 1
+    n = 3^i
+    log3(n) = i
+
+    Armamos el T(n)
+    T(n) = T(n/3^i) + log3(n) * c 
+    T(n) = log3(n) * c + 1      --> O(log3(n))
+    
+8) T(n) = 2n * c        --> O(n)
+
+    100.000     1s
+    T(n)        ?
+
+    T(1000) = 2000
+    El tiempo aproximado que requerira el algoritmo para n = 1000 es 2000/100.000 = 0,02s 
+
+    Opcion D. Ninguna de las opciones anteriores.
+
+9) T(n) = 2T(n/2) + 5n + 1          n >= 2
+   T(4) = 2T(4/2) + 5*4 + 1
+        = 2 [2T(2/2) + 5*2 + 1] + 21       --> 4T(2/2) + 43 
+        = 4[T(1)] + 43  =  4*4 + 43        --> 59 Opcion C.
+        

@@ -1,0 +1,41 @@
+14) 
+
+15) i * i < n 
+    i^2 < n 
+    i < raiz(n) 
+
+16)     R       I           R       J 
+        1       1           1       1
+        2       2           2
+
+
+
+
+
+      n      n - 1
+    sumat   (sumat) cte 
+    i = 1    j = 1
+
+      n    
+   = sumat  (n-1) cte 
+     i = 1    
+
+      n    
+   = sumat  ncte - cte 
+     i = 1 
+
+             n          n
+   = cte * sumat  n - sumat cte 
+           i = 1      i = 1
+      
+   = cte * ((n*(n +1))/2 -  n*cte)
+
+   = cte * ((n^2 + n)/2 - n*cte)
+
+   = ((((n^2 + n)/ 2) * cte) - n*cte)       --> O(n^2)        
+
+
+
+
+
+

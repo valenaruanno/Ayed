@@ -1,0 +1,31 @@
+1) Ordene las siguientes funciones: √n, n, 3n, n2, cte, 2n, (log2(n))^2, log3(n), log2(n) según su velocidad de
+crecimiento.
+
+    1- cte
+    2- √n 
+    3- log2(n)
+    4- log3(n)
+    5- (log2(n))^2
+    6- n
+    7- 2n
+    8- 3n
+    9- n^2
+
+2) Opcion e. O(n^3)
+
+3) 
+    10.000         1s
+    t(n) 
+
+    10.000          1s
+    t(1024)
+
+    T(n) = 1024 * log2 (1024) = 10.240
+
+    El tiempo que requerira el algoritmo para resolver el problema es (10.240)/10.000 = 1,024s
+
+
+
+
+
+
