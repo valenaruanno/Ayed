@@ -1,0 +1,24 @@
+2) 
+    T(n) = n * (c1 + n)     
+         = n^2 + n*c1                 --> O(n^2)
+
+
+    T(n) = (n^2 * c1) 
+
+3)  a- Verdadero
+    b- Verdadero
+    c- Falso
+    d- Falso
+
+4)
+
+5) Opcion B.
+
+6) Paso 1 = T(n/2)
+   Paso 2 = T(n/4)
+   Paso i = T(n/2^i) 
+                                T(n) = T(n / 2^log2(n))
+   n/2^i = 1                    T(n) = 1            
+   n = 2^i
+   log2(n) = i 
+

@@ -3,8 +3,8 @@
 
          Opcion D.
 
-11) T(n) = (n-1) * (n-1)
-         = n^2 - 2n -2
+11) T(n) = (n) * cte 
+         = ncte             --> 0(n)
 
 12) 
     i = 0   j = 0   k = 0   p = 0   q = 0
@@ -26,12 +26,12 @@
 
     for interno     R           J                   despejamos k
                     1           1                   k-1 = n 
-                    2           2                   k = n + 1
+                    2           n/2                  k = n + 1
                     k           k-1
 
-    T(n) = (n/2 + 1) * ((n + 1) * log2(n))
-         = (n/2 + 1) * (nlog2(n) + log2(n))
-         = ((n^2 log2(n))/2 + (nlog2(n))/2 + nlog2(n) + log2(n))    O(n^2log2(n))
+    T(n) = (n/2) * ((n/2) * log2(n))
+         = (n/2) * (nlog2(n)/2)
+         = (n^2*log2 (n)) / 4                   --> O(n^2*log2(n))
 
     
 

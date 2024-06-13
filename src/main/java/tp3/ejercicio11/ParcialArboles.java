@@ -29,10 +29,10 @@ public class ParcialArboles {
                     cola.enQueue(child);
                 }
             } else{
+                if (!(cant + 1 == cantC))
+                        ok = false;
                 if (!cola.isEmpty()){
                     cola.enQueue(null);
-                    if (!(cant + 1 == cantC))
-                        ok = false;
                     System.out.println(ok);
                     cant++;
                     cantC = 0;

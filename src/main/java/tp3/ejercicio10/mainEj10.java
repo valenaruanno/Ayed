@@ -47,6 +47,5 @@ public class mainEj10 {
         
         for (Integer b: lista)
             System.out.println(b);
-    }
-    
+    }   
 }
