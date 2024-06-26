@@ -1,0 +1,13 @@
+1) 
+    a) Los vertices alcanzables desde el vertice 1 aplicando el recorrido DFS son 4, 2 y 5. 
+        El orden no lo podemos determinar ya que no sabemos como se encuentra cargado.
+    b) Los vertices alcanzables desde el vertice 1 aplicando el recorrido BFS son 4, 2 y 5.
+
+2) Si inicio en R: R, M, N, Q, O, P
+   Si inicio en M: M, R, Q, N, P, O
+   Si inicio en N: N, M, Q, O, R, P 
+   Si inicio en Q: Q, M, N, P, R, O         Opcion C.
+
+3) 
+
+4) 4,5,3,6,7,0,1,8,2        Opcion B.

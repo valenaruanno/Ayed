@@ -112,6 +112,70 @@ public class Mapa {
     }
     
     private void buscarCaminoCorto (Graph<String> grafo, String ciudad1, String ciudad2, List<String> caminoAct, List<String> camino){
-        
+        boolean [] marca = new boolean [grafo.getSize()];
+        int min = 9999;
+        Vertex<String> v = grafo.search(ciudad1);
+        if (!v.getData().equals(null))
+            min = buscar (grafo, v, ciudad2, caminoAct, camino, marca, min);
+    }
+    
+    private int buscar (Graph<String> grafo, Vertex<String> destino, String ciudad2, List<String> caminoAct, List<String> camino, boolean [] marca, int min){
+        caminoAct.add(destino.getData());
+        marca[destino.getPosition()] = true;
+        if (destino.getData() == ciudad2){
+            if (caminoAct.size() < min){
+                min = caminoAct.size();
+                camino.removeAll(camino);
+                camino.addAll(caminoAct);
+            }
+        } else{
+            List<Edge<String>> adyacentes = grafo.getEdges(destino); 
+            for (Edge<String> ady: adyacentes){
+                Vertex<String> v = ady.getTarget();
+                if (!(marca[v.getPosition()]))
+                    min = buscar (grafo, v, ciudad2, caminoAct, camino, marca, min);
+            }
+        }
+        marca[destino.getPosition()] = false;
+        caminoAct.remove(destino.getData());
+        return min;
+    }
+    
+    public List<String> caminoSinCargarCombustible (String ciudad1, String ciudad2, int tanqueAuto){
+        List<String> camino = new LinkedList<String> ();
+        if (!grafo.isEmpty())
+            caminoSinCargar(grafo, ciudad1, ciudad2, tanqueAuto, camino);
+        return camino;
+    }
+    
+    private List<String> caminoSinCargar (Graph<String> grafo,String ciudad1, String ciudad2, int tanqueAuto, List<String> camino){
+        boolean [] marca = new boolean [grafo.getSize()];
+        Vertex<String> origen = grafo.search(ciudad1);
+        boolean ok = false;
+        if ((origen != null))
+            ok = dfsSinCargar(grafo, origen, ciudad2, tanqueAuto, camino, marca, ok);
+        return camino;
+    }
+    
+    private boolean dfsSinCargar (Graph<String> grafo, Vertex<String> origen, String ciudad2, int tanqueAuto, List<String> camino, boolean [] marca, boolean ok){
+        marca[origen.getPosition()] = true;
+        camino.add(origen.getData());
+        if (origen.getData() == ciudad2){
+            ok = true;
+        }else {
+            List<Edge<String>> adyacentes = grafo.getEdges(origen);
+            Iterator<Edge<String>> it = adyacentes.iterator();
+            
+            while ((it.hasNext()) && (!ok)){
+                Vertex<String> v = it.next().getTarget();
+                if ((!marca[v.getPosition()]) && (tanqueAuto - it.next().getWeight() > 0))
+                    ok = dfsSinCargar (grafo, v, ciudad2, tanqueAuto - it.next().getWeight(), camino, marca, ok);
+            }
+            if (!ok){
+                camino.remove(camino.size() - 1);
+            }
+        }
+        marca[origen.getPosition()] = true;
+        return ok;
     }
 }
