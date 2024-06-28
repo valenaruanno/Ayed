@@ -90,14 +90,14 @@ public class ParcialArboles {
         BinaryTree <Integer> arbolIzq = new BinaryTree <Integer> (8);
         arbolIzq.addLeftChild(new BinaryTree <Integer>(5));
         BinaryTree <Integer> arbolDer = new BinaryTree <Integer> (13);
-        arbolDer.addRightChild(new BinaryTree <Integer> (8));
+        arbolDer.addRightChild(new BinaryTree <Integer> (9));
 
         BinaryTree <Integer> arbol = new BinaryTree <Integer> (14);
         arbol.addLeftChild(arbolIzq);
         arbol.addRightChild(arbolDer);
 
         ParcialArboles par = new ParcialArboles(arbol);
-        System.out.println(par.isLeaftTree(8));
+        System.out.println(par.isLeaftTree(14));
     }
     /*private boolean chequear (BinaryTree<Integer> ab){
         boolean si = false;
