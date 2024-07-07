@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package parciales.arboles.Enunciado15;
+package parciales.Arboles.Enunciado9;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -14,23 +14,52 @@ import tp3.ejercicio1.GeneralTree;
  * @author valen
  */
 public class Parcial {
-    
-    public List<String> resolver (int menor, int mayor, GeneralTree<Integer> arbol){
-        List<String> lista = new LinkedList<String> ();
-        if (!arbol.isEmpty())
-            llenar (menor, mayor, arbol, lista, 0);
-        return lista;
+    public int resolver (GeneralTree<Integer> arbol){
+        int respuesta = 0;
+        List<Integer> lista = new LinkedList<Integer> ();
+        if (!arbol.isEmpty()){
+            respuesta = resolver (arbol, lista);
+            System.out.println(respuesta);
+            if (respuesta % 2 == 0){
+                respuesta = 0;
+                respuesta = sumarPositivos(lista);
+            } else{
+                respuesta = 0;
+                respuesta = sumarNegativos(lista);
+            } 
+        }
+        return respuesta;
     }
     
-    private void llenar (int menor, int mayor, GeneralTree<Integer> arbol, List<String> lista, int nivel){
+    private int resolver (GeneralTree<Integer> arbol, List<Integer> lista){
+        int suma = 0;
         List<GeneralTree<Integer>> children = arbol.getChildren();
-        for (GeneralTree<Integer> child: children)
-            llenar (menor, mayor, child, lista, nivel++);
-        if ((arbol.getData() >= menor) && (arbol.getData() <= mayor))
-            lista.add (arbol.getData() + " es de nivel " + nivel);
+        for (GeneralTree<Integer> child : children)
+            suma += resolver (child, lista);
+        suma += arbol.getData();
+        lista.add(arbol.getData());
+        return suma;
     }
     
-     public static void main(String[] args) {
+    private int sumarPositivos(List<Integer> lista){
+        int suma = 0;
+        for (Integer num : lista){
+            if (num > 0)
+                suma += num;
+        }
+        return suma;
+    }
+    
+    private int sumarNegativos(List<Integer> lista){
+        int suma = 0;
+        for (Integer num : lista){
+            if (num < 0)
+                suma += num;
+        }
+        return suma;
+    }
+    
+    public static void main(String[] args) {
         List<GeneralTree<Integer>> subChildren1 = new LinkedList<GeneralTree<Integer>>();
         subChildren1.add(new GeneralTree<Integer>(2));
         GeneralTree<Integer> subAb1 = new GeneralTree<Integer>(7, subChildren1);
@@ -38,7 +67,7 @@ public class Parcial {
         subChildren2.add(new GeneralTree<Integer>(-4));
         subChildren2.add(subAb1);
         subChildren2.add(new GeneralTree<Integer>(-6));
-        GeneralTree<Integer> a1 = new GeneralTree<Integer>(3, subChildren2);
+        GeneralTree<Integer> a1 = new GeneralTree<Integer>(4, subChildren2);
         
         List<GeneralTree<Integer>> subChildren3 = new LinkedList<GeneralTree<Integer>>();
         subChildren3.add(new GeneralTree<Integer>(1));
@@ -52,8 +81,6 @@ public class Parcial {
         GeneralTree<Integer> a = new GeneralTree<Integer>(-7, arbol);
         
         Parcial p = new Parcial();
-        List<String> lis = p.resolver(5, 10, a);
-        for (String s: lis)
-            System.out.println(s);
+        System.out.println(p.resolver(a));
     }
 }
