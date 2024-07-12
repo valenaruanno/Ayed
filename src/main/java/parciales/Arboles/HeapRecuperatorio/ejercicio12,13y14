@@ -1,0 +1,63 @@
+Ejercicio 12
+¿Cuáles de los siguientes arreglos representan una max-heap, min-heap o ninguna de las dos?
+• arreglo 1: 0 1 2 0 4 5 6 7 8 9
+
+                                                0
+                                1                               2
+                        0               4              5                6
+                    7       8       9
+
+                    Ninguna 
+• arreglo 2: 9 8 7 6 5 4 3 2 1 0
+
+                                                9
+                                8                               7
+                        6               5              4                3
+                    2       1       0
+
+                    Max-Heap 
+• arreglo 3: 5 5 5 6 6 6 6 7 7 1
+
+                                                5
+                                5                               5
+                        6               6              6                6
+                    7       7       1
+
+                    Ninguna 
+• arreglo 4: 9 3 9 2 1 6 7 1 2 1
+
+                                                9
+                                3                               9
+                        2               1              6                7
+                    1       2       1
+
+                    Max-Heap
+• arreglo 5: 8 7 6 1 2 3 4 2 1 2
+
+                                                8
+                                7                               6
+                        1               2              3                4
+                    2       1       2
+
+                    Ninguna 
+
+
+
+Ejercicio 13
+Un arreglo de 7 enteros se ordena ascendentemente usando el algoritmo HeapSort. Luego de la fase
+inicial del algoritmo (la construcción de la heap), ¿cuál de los siguientes es un posible orden del arreglo?
+
+Opcion B.
+
+
+
+Ejercicio 14
+En una Heap, ¿para un elemento que está en la posición i su hijo derecho está en la posición……?
+
+Opcion C.
+
+
+
+
+
+

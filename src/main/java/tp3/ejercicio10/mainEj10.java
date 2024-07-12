@@ -35,9 +35,6 @@ public class mainEj10 {
         HD.addChild(new GeneralTree <Integer> (1));
         
         GeneralTree <Integer> arbol = new GeneralTree <Integer> (1);
-        arbol.addChild(new GeneralTree <Integer> (1));
-        arbol.addChild(new GeneralTree <Integer> (1));
-        arbol.addChild(new GeneralTree <Integer> (1));
         arbol.addChild(HI);
         arbol.addChild(HM);
         arbol.addChild(HD);

@@ -11,17 +11,20 @@ import tp2.ejercicio1.BinaryTree;
 public class ParcialArboles {
     
     public BinaryTree <Data> sumAndDif (BinaryTree <Integer> ab){
-        return (!ab.isEmpty()) ? sumAndDif (ab, 0, 0) : null;
+        BinaryTree<Data> nuevo = new BinaryTree<Data> ();
+        if (!ab.isEmpty())
+            nuevo = sumAndDif (ab, 0, 0);
+        return nuevo;
     }
     
     private BinaryTree <Data> sumAndDif (BinaryTree <Integer> ab, int sum, int padre){
-        int suma = ab.getData() + sum;
-        int dif = ab.getData() - padre;
-        BinaryTree <Data> nuevo = new BinaryTree <Data> (new Data (suma, dif));
+        BinaryTree<Data> nuevo = new BinaryTree<Data> ();
+        Data raiz = new Data (sum + ab.getData(), ab.getData() - padre);
+        nuevo.setData(raiz);
         if (ab.hasLeftChild())
-            nuevo.addLeftChild(sumAndDif (ab.getLeftChild(), suma, ab.getData()));
+            nuevo.addLeftChild(sumAndDif (ab.getLeftChild(), sum + ab.getData(), ab.getData()));
         if (ab.hasRightChild()){
-            nuevo.addRightChild(sumAndDif (ab.getRightChild(), suma, ab.getData()));
+            nuevo.addRightChild(sumAndDif (ab.getRightChild(), sum + ab.getData(), ab.getData()));
         }
         return nuevo;
     }

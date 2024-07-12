@@ -24,7 +24,7 @@ public class ParcialArboles {
     
     private static int resolver (GeneralTree<Integer> arbol, List<Integer> caminoAct, List<Integer> camino, int nivel, int resCaminoAct, int resCamino){
         if (arbol.getData() == 1){
-            camino.add(1);
+            caminoAct.add(1);
             resCaminoAct = resCaminoAct + (nivel * 1);
         }
         if (!arbol.isLeaf()){
